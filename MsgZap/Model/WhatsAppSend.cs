@@ -1,16 +1,22 @@
 ﻿using System;
 
-namespace MsgZap.Model
-{
-    class WhatsAppSend
-    {
+namespace MsgZap.Model {
+    class WhatsAppSend {
 
-        public String Remetente { get; set; }
-        public String Destinatario { get; set; }
-        public String Id { get; set; }
-        public String Cmd { get; set; }
-        public String Token { get; set; }
+        public Int32 Id { get; set; }
+        public Remetente Remetente { get; set; }
+        public Destinatario Destinatario { get; set; }
+        public String Chave { get; set; }
         public String Texto { get; set; }
+        public String Token { get; set; }
+        public String Cmd { get; set; }
 
+        //Envio de Img
+        public String UrlImg { get; set; }
+
+        //msg com link opcionais
+        public String Titulo { get; set; }
+        public String Descricao { get; set; }
+        public String UrlMsg { get; set; }
     }
 }
