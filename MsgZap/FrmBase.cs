@@ -17,8 +17,8 @@ namespace MsgZap {
         private const String URL_PLATFORM = "https://apizap.me:8443/api";
         private const String TOKEN = "I8B4A95J-3LHG-2G3D-C2EF-7CB93I21G6H8";
         private const String SUCCESS = "{\"message\":\"sucesso\"}";
-        private const String REMETENTE = "558198950253";
-        private const String TESTE_DESTINATARIO = "5581997491149";
+        private const String REMETENTE = "REMETENTE";
+        private const String TESTE_DESTINATARIO = "DESTINATARIO";
 
         DataTable Table;
         Connect Con;
@@ -41,7 +41,7 @@ namespace MsgZap {
 
         public void EnviarOperadores() 
         {
-            String[] NumOperador = { "5581997491149", "5581999012610", "5581992253342", "5581983460962" };
+            String[] NumOperador = { "", "", "", "" };
             String[] NameOperador = { "CAROL", "NEWTON", "KILDERE", "MARLON" };
             try 
             {
