@@ -1,7 +1,9 @@
 ﻿using System;
 
-namespace MsgZap.Model {
-    class WhatsAppSend {
+namespace MsgZap.Model 
+{
+    class WhatsAppSend 
+    {
 
         public Int32 Id { get; set; }
         public Remetente Remetente { get; set; }

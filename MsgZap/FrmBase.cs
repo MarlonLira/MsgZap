@@ -23,16 +23,17 @@ namespace MsgZap {
         DataTable Table;
         Connect Con;
         WhatsAppSendPST Send;
-        
+        FrmHome Inicio;
 
         //Variaveis de controle
         Boolean Parar;
         Int32 Contador = 0;
 
-        public FrmBase()
+        public FrmBase(FrmHome Frm)
         {
             InitializeComponent();
 
+            Inicio = Frm;
             cb_testar.Checked = false;
             dtp_final.Text = DateTime.Now.ToShortDateString();
         }
@@ -303,5 +304,12 @@ namespace MsgZap {
             Msg.Show();
             this.Hide();
         }
+
+        private void btn_voltar_Click(object sender, EventArgs e) 
+        {
+            Inicio.Show();
+            this.Hide();
+        }
+       
     }
 }

@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.Rtxt_Texto = new System.Windows.Forms.RichTextBox();
-            this.btn_enviar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbb_unidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +44,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_final = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicial = new System.Windows.Forms.DateTimePicker();
-            this.btn_testar = new System.Windows.Forms.Button();
             this.cb_testar = new System.Windows.Forms.CheckBox();
-            this.btn_cancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_falhas = new System.Windows.Forms.Label();
             this.lbl_enviados = new System.Windows.Forms.Label();
             this.lbl_total = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_enviar = new System.Windows.Forms.Button();
             this.btn_personalizar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_testar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,21 +68,11 @@
             // 
             this.Rtxt_Texto.BackColor = System.Drawing.SystemColors.Window;
             this.Rtxt_Texto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Rtxt_Texto.Location = new System.Drawing.Point(31, 250);
+            this.Rtxt_Texto.Location = new System.Drawing.Point(28, 210);
             this.Rtxt_Texto.Name = "Rtxt_Texto";
             this.Rtxt_Texto.Size = new System.Drawing.Size(326, 254);
             this.Rtxt_Texto.TabIndex = 1;
             this.Rtxt_Texto.Text = "";
-            // 
-            // btn_enviar
-            // 
-            this.btn_enviar.Location = new System.Drawing.Point(282, 221);
-            this.btn_enviar.Name = "btn_enviar";
-            this.btn_enviar.Size = new System.Drawing.Size(75, 23);
-            this.btn_enviar.TabIndex = 2;
-            this.btn_enviar.Text = "Enviar";
-            this.btn_enviar.UseVisualStyleBackColor = true;
-            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
             // 
             // label2
             // 
@@ -208,7 +204,7 @@
             this.txt_img.Enabled = false;
             this.txt_img.Location = new System.Drawing.Point(34, 175);
             this.txt_img.Name = "txt_img";
-            this.txt_img.Size = new System.Drawing.Size(281, 20);
+            this.txt_img.Size = new System.Drawing.Size(221, 20);
             this.txt_img.TabIndex = 26;
             // 
             // groupBox1
@@ -269,16 +265,6 @@
             this.dtp_inicial.Size = new System.Drawing.Size(88, 20);
             this.dtp_inicial.TabIndex = 32;
             // 
-            // btn_testar
-            // 
-            this.btn_testar.Location = new System.Drawing.Point(31, 221);
-            this.btn_testar.Name = "btn_testar";
-            this.btn_testar.Size = new System.Drawing.Size(75, 23);
-            this.btn_testar.TabIndex = 32;
-            this.btn_testar.Text = "Testar";
-            this.btn_testar.UseVisualStyleBackColor = true;
-            this.btn_testar.Click += new System.EventHandler(this.btn_testar_Click);
-            // 
             // cb_testar
             // 
             this.cb_testar.AutoSize = true;
@@ -289,16 +275,6 @@
             this.cb_testar.Text = "Testando";
             this.cb_testar.UseVisualStyleBackColor = true;
             this.cb_testar.Visible = false;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Location = new System.Drawing.Point(201, 221);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 34;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // groupBox2
             // 
@@ -339,27 +315,140 @@
             this.lbl_total.TabIndex = 26;
             this.lbl_total.Text = "TOTAL:";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(96, 470);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 40);
+            this.panel3.TabIndex = 68;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Location = new System.Drawing.Point(186, 470);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 40);
+            this.panel2.TabIndex = 67;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(276, 470);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 40);
+            this.panel1.TabIndex = 66;
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Location = new System.Drawing.Point(191, 470);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(80, 40);
+            this.btn_cancelar.TabIndex = 64;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.FlatAppearance.BorderSize = 0;
+            this.btn_voltar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.btn_voltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_voltar.Location = new System.Drawing.Point(12, 470);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(80, 40);
+            this.btn_voltar.TabIndex = 63;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // btn_enviar
+            // 
+            this.btn_enviar.FlatAppearance.BorderSize = 0;
+            this.btn_enviar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.btn_enviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_enviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn_enviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_enviar.Location = new System.Drawing.Point(281, 470);
+            this.btn_enviar.Name = "btn_enviar";
+            this.btn_enviar.Size = new System.Drawing.Size(80, 40);
+            this.btn_enviar.TabIndex = 62;
+            this.btn_enviar.Text = "Enviar";
+            this.btn_enviar.UseVisualStyleBackColor = true;
+            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
+            // 
             // btn_personalizar
             // 
-            this.btn_personalizar.Location = new System.Drawing.Point(117, 221);
+            this.btn_personalizar.Enabled = false;
+            this.btn_personalizar.FlatAppearance.BorderSize = 0;
+            this.btn_personalizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.btn_personalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_personalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn_personalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_personalizar.Location = new System.Drawing.Point(101, 470);
             this.btn_personalizar.Name = "btn_personalizar";
-            this.btn_personalizar.Size = new System.Drawing.Size(75, 23);
-            this.btn_personalizar.TabIndex = 36;
+            this.btn_personalizar.Size = new System.Drawing.Size(80, 40);
+            this.btn_personalizar.TabIndex = 65;
             this.btn_personalizar.Text = "Personalizar";
             this.btn_personalizar.UseVisualStyleBackColor = true;
             this.btn_personalizar.Click += new System.EventHandler(this.btn_personalizar_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Location = new System.Drawing.Point(265, 184);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 20);
+            this.panel4.TabIndex = 71;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel5.Location = new System.Drawing.Point(355, 184);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 20);
+            this.panel5.TabIndex = 70;
+            // 
+            // btn_testar
+            // 
+            this.btn_testar.FlatAppearance.BorderSize = 0;
+            this.btn_testar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.btn_testar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_testar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn_testar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_testar.Location = new System.Drawing.Point(270, 184);
+            this.btn_testar.Name = "btn_testar";
+            this.btn_testar.Size = new System.Drawing.Size(79, 20);
+            this.btn_testar.TabIndex = 69;
+            this.btn_testar.Text = "Testar";
+            this.btn_testar.UseVisualStyleBackColor = true;
+            this.btn_testar.Click += new System.EventHandler(this.btn_testar_Click);
             // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(769, 516);
+            this.ClientSize = new System.Drawing.Size(778, 528);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btn_testar);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_voltar);
+            this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.btn_personalizar);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.cb_testar);
-            this.Controls.Add(this.btn_testar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_img);
@@ -371,7 +460,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbb_unidade);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.Rtxt_Texto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -392,7 +480,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox Rtxt_Texto;
-        private System.Windows.Forms.Button btn_enviar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbb_unidade;
         private System.Windows.Forms.Label label3;
@@ -412,14 +499,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DGV_nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGV_telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGV_status;
-        private System.Windows.Forms.Button btn_testar;
         private System.Windows.Forms.CheckBox cb_testar;
-        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbl_falhas;
         private System.Windows.Forms.Label lbl_enviados;
         private System.Windows.Forms.Label lbl_total;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_enviar;
         private System.Windows.Forms.Button btn_personalizar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_testar;
     }
 }
 

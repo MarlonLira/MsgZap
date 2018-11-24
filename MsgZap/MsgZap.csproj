@@ -56,6 +56,18 @@
     <Compile Include="FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmail.Designer.cs">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMsg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,14 +81,22 @@
       <DependentUpon>higestor_higestor3DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Destinatario.cs" />
+    <Compile Include="Model\EmailSend.cs" />
     <Compile Include="Model\Remetente.cs" />
     <Compile Include="Model\WhatsAppSend.cs" />
     <Compile Include="Persistence\Connect.cs" />
+    <Compile Include="Persistence\EmailSendPST.cs" />
     <Compile Include="Persistence\WhatsAppSendPST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmail.resx">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMsg.resx">
       <DependentUpon>FrmMsg.cs</DependentUpon>

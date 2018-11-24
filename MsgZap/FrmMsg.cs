@@ -4,12 +4,12 @@ using System.Windows.Forms;
 namespace MsgZap {
     public partial class FrmMsg : Form {
 
-        FrmBase Inicio;
+        FrmBase MsgZap;
         
         public FrmMsg(FrmBase Frm) 
         {
             InitializeComponent();
-            Inicio = Frm;
+            MsgZap = Frm;
         }
 
         private String MsgReplace(String MsgAnt)
@@ -24,14 +24,14 @@ namespace MsgZap {
         private void btn_voltar_Click(object sender, EventArgs e) 
         {
             this.Hide();
-            Inicio.Show();
+            MsgZap.Show();
         }
 
         private void btn_salvar_Click(object sender, EventArgs e) 
         {
-            Inicio.MsgPersonalizada(MsgReplace(Rtxt_titulo.Text), MsgReplace(Rtxt_msg.Text), MsgReplace(Rtxt_infos.Text));
+            MsgZap.MsgPersonalizada(MsgReplace(Rtxt_titulo.Text), MsgReplace(Rtxt_msg.Text), MsgReplace(Rtxt_infos.Text));
             this.Hide();
-            Inicio.Show();
+            MsgZap.Show();
         }
         
     }

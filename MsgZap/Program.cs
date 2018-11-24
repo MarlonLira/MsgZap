@@ -13,7 +13,7 @@ namespace MsgZap {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBase());
+            Application.Run(new FrmHome());
         }
     }
 }

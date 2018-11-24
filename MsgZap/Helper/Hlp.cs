@@ -223,59 +223,65 @@ namespace MsgZap.Helper
             return Talk;
         }
 
-        public String RandomTalk(String Nome) {
+        public String RandomTalk(String Nome)
+        {
             String Talk = "";
-            Int32 Num = RandomNumber(1, 12);
+            Int32 Num = RandomNumber(1, 13);
 
             switch (Num) {
                 case 1: {
-                        Talk = "Bom dia " + Nome + "Tudo bem com você ?";
+                        Talk = "Bom dia " + Nome + " Tudo bem com você ?";
                         break;
-                    }
+                }
                 case 2: {
                         Talk = "Olá tudo bem? " + Nome;
                         break;
-                    }
+                }
                 case 3: {
                         Talk = "Como vai? " + Nome;
                         break;
-                    }
+                }
                 case 4: {
                         Talk = "Olá " + Nome;
                         break;
-                    }
+                }
                 case 5: {
                         Talk = "Oi tudo bem? " + Nome;
                         break;
-                    }
+                }
                 case 6: {
                         Talk = "Olá, Como vai? " + Nome;
                         break;
-                    }
+                }
                 case 7: {
                         Talk = "Bom dia, Como vai? " + Nome;
                         break;
-                    }
+                }
                 case 8: {
                         Talk = "Tudo Bem? " + Nome;
                         break;
-                    }
+                }
                 case 9: {
                         Talk = "Olá " + Nome + " Como vai?";
                         break;
-                    }
+                }
                 case 10: {
                         Talk = "Olá " + Nome + " Tudo bem?";
                         break;
-                    }
+                }
                 case 11: {
                         Talk = Nome + " Como vai?" ;
                         break;
-                    }
+                }
                 case 12: {
                         Talk = "Olá "+ Nome + " Tudo Bem com você?";
                         break;
-                    }
+                }
+                case 13:
+                {
+                    Talk = "Bom dia " + Nome + " Como vai? ";
+                    break;
+                }
 
             }
 
