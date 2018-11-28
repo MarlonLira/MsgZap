@@ -50,16 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBase.cs">
+    <Compile Include="Frm\Reports\FrmReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBase.Designer.cs">
+    <Compile Include="Frm\Reports\FrmReports.Designer.cs">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\WhatsApp\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\WhatsApp\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEmail.cs">
+    <Compile Include="Frm\Email\FrmEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmail.Designer.cs">
+    <Compile Include="Frm\Email\FrmEmail.Designer.cs">
       <DependentUpon>FrmEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHome.cs">
@@ -68,11 +74,17 @@
     <Compile Include="FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMsg.cs">
+    <Compile Include="Frm\WhatsApp\FrmMsg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMsg.Designer.cs">
+    <Compile Include="Frm\WhatsApp\FrmMsg.Designer.cs">
       <DependentUpon>FrmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Email\FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Email\FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Hlp.cs" />
     <Compile Include="higestor_higestor3DataSet.Designer.cs">
@@ -86,20 +98,27 @@
     <Compile Include="Model\WhatsAppSend.cs" />
     <Compile Include="Persistence\Connect.cs" />
     <Compile Include="Persistence\EmailSendPST.cs" />
+    <Compile Include="Persistence\ReportsPst.cs" />
     <Compile Include="Persistence\WhatsAppSendPST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBase.resx">
+    <EmbeddedResource Include="Frm\Reports\FrmReports.resx">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\WhatsApp\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmail.resx">
+    <EmbeddedResource Include="Frm\Email\FrmEmail.resx">
       <DependentUpon>FrmEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMsg.resx">
+    <EmbeddedResource Include="Frm\WhatsApp\FrmMsg.resx">
       <DependentUpon>FrmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Email\FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,5 +159,6 @@
   <ItemGroup>
     <Content Include="msgzap_icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
