@@ -42,8 +42,8 @@ namespace MsgZap {
 
         public void EnviarOperadores() 
         {
-            String[] NumOperador = { "558197491149", "558197491149", "558197491149", "558183460962" };
-            String[] NameOperador = { "CAROL", "NEWTON", "KILDERE", "MARLON" };
+            String[] NumOperador = { "", "", "", "" };
+            String[] NameOperador = { "", "", "", "" };
             try 
             {
                 for (int x = 0; x <= 3; x++) {
@@ -178,8 +178,8 @@ namespace MsgZap {
 
                     String[] NomeFormat = Nome.Split(' ');
                     TextFormat = Rtxt_Texto.Text.Replace("{nome}", NomeFormat[0]);
-                    TextFormat = TextFormat.Replace("{hix}", "Texto fixo Hix");
-                    TextFormat = TextFormat.Replace("{hi}", "Texto fixo Hi");
+                    TextFormat = TextFormat.Replace("{hix}", "Texto fixo 1");
+                    TextFormat = TextFormat.Replace("{hi}", "Texto fixo 2");
                     TextFormat = TextFormat.Replace("{comprimento}", Hlp.RandomTalk());
                     TextFormat = TextFormat.Replace("{comprimentoplus}", Hlp.RandomTalk(NomeFormat[0]));
                     Send.Texto = TextFormat;
