@@ -78,9 +78,9 @@ namespace MsgZap {
 
             if (String.IsNullOrEmpty(txt_img.Text) && String.IsNullOrEmpty(txt_campanha.Text)) 
             {
-                Rtxt_titulo.Text = "CAMPANHA DE VERÃO HIX";
-                txt_campanha.Text = "http://ofertas.yesfitacademia.com.br/";
-                txt_img.Text = "https://i.imgur.com/6ifBI3c.jpg";
+                Rtxt_titulo.Text = "";
+                txt_campanha.Text = "";
+                txt_img.Text = "";
             }
 
             using (SmtpClient Smtp = new SmtpClient()) 
@@ -126,8 +126,8 @@ namespace MsgZap {
         }
         public void EnviarOperadores() 
         {
-            String[] EmailOperador = {"marlon.lira@hiacademia.com.br", "marketing@hiacademia.com.br", "newtonvvf@hotmail.com"};
-            String[] NameOperador = {"Marlon", "Carol","Newton"};
+            String[] EmailOperador = {"", "", ""};
+            String[] NameOperador = {"", "",""};
 
             try
             {
@@ -148,18 +148,18 @@ namespace MsgZap {
             Send.Remetente = new Remetente();
 
             // Dados Remetente
-            Send.Remetente.Nome = "Hi Academia";
-            //Send.Remetente.Email = "himarketing2019@gmail.com";
-            Send.Remetente.Email = "marketing@hiacademia.com.br";
+            Send.Remetente.Nome = "";
+            //Send.Remetente.Email = "";
+            Send.Remetente.Email = "";
 
             // Dados Servidor
             Send.Host = "smtp.gmail.com";
             //Send.Host = "smtplw.com.br";
             Send.Port = 587;
-            //Send.From = "marketing@hiacademia.com.br";
-            //Send.Pass = "neves@506070";
-            Send.From = "himarketing2019@gmail.com";
-            Send.Pass = "root1526";
+            //Send.From = "";
+            //Send.Pass = "";
+            Send.From = "";
+            Send.Pass = "";
 
             // Dados Msg
             Send.Subject = Rtxt_titulo.Text;
@@ -212,7 +212,7 @@ namespace MsgZap {
                             Mail.From = new MailAddress(Send.From);
 
                             Mail.To.Add(new MailAddress(Send.Destinatario.Email));
-                            //Mail.To.Add(new MailAddress("marlon.lira@hiacademia.com.br"));
+                            //Mail.To.Add(new MailAddress(""));
                             Mail.Subject = Send.Subject;
                             Mail.IsBodyHtml = true;
                             Mail.Body = Send.Body;
